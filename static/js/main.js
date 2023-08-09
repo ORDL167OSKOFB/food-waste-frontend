@@ -2,6 +2,20 @@ $(document).ready(function() {
 
 const backendURL = "https://foodwaste-backend.azurewebsites.net/";
 
+
+
+//    Try initializing (maybe move this out of the frontend)
+    $.ajax({
+        url: backendURL + '/init-food',
+        type: 'POST',
+        contentType: 'application/json',
+        success: function(response) {
+            console.log("Table created successfully:", response.message);
+        },
+        error: function(error) {
+            console.error("Error creating table:", error);
+        }
+    });
     $("#addFoodForm").submit(function(event) {
         event.preventDefault();
         let data = {
