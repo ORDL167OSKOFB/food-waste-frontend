@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-
+const backendURL = "https://foodwaste-backend.azurewebsites.net/";
 
     $("#addFoodForm").submit(function(event) {
         event.preventDefault();
@@ -11,7 +11,7 @@ $(document).ready(function() {
             dateAdded: $("#dateAdded").val()
         };
         $.ajax({
-            url: '/add-food',
+            url: backendURL + '/add-food',
             type: 'POST',
             data: JSON.stringify(data),
             contentType: 'application/json',
@@ -37,7 +37,7 @@ $(document).ready(function() {
             dateAdded: $("#dateAdded").val()
         };
         $.ajax({
-            url: '/add-food',
+            url: backendURL + '/add-food',
             type: 'POST',
             data: JSON.stringify(data),
             contentType: 'application/json',
@@ -61,7 +61,7 @@ $(document).ready(function() {
             foodName: $("#foodName").val()
         };
         $.ajax({
-            url: '/return-foods',
+            url: backendURL + '/return-foods',
             type: 'GET',
             data: JSON.stringify(data),
             contentType: 'application/json',
@@ -88,7 +88,7 @@ $(document).ready(function() {
         };
           // Note: method was ori
         $.ajax({
-            url: '/update-food',
+            url: backendURL + '/update-food',
             type: 'PUT',
             data: JSON.stringify(data),
             contentType: 'application/json',
@@ -110,7 +110,7 @@ $(document).ready(function() {
             };
             // Note: method was ori
             $.ajax({
-                url: '/delete-food',
+                url: backendURL + '/delete-food',
                 type: 'POST', 
                 data: JSON.stringify(data),
                 contentType: 'application/json',
