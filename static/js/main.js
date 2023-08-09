@@ -29,7 +29,7 @@ const backendURL = "https://foodwaste-backend.azurewebsites.net/";
             }
         });
 
-
+        return false;
     });
 
   
@@ -60,6 +60,8 @@ const backendURL = "https://foodwaste-backend.azurewebsites.net/";
             }
         });
 
+
+        return false;
 
     });
 
@@ -92,6 +94,7 @@ const backendURL = "https://foodwaste-backend.azurewebsites.net/";
             }
         });
 
+        return false;
     });
 
         $("#removeFoodForm").submit(function(event) {
@@ -119,6 +122,7 @@ const backendURL = "https://foodwaste-backend.azurewebsites.net/";
                 }
             });
 
+            return false;
         });
 
 
@@ -137,7 +141,7 @@ const backendURL = "https://foodwaste-backend.azurewebsites.net/";
 
 
 
-
+            return false;
     });
 
 
