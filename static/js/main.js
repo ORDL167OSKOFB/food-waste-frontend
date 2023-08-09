@@ -5,9 +5,9 @@ const backendURL = "https://foodwaste-backend.azurewebsites.net/";
     $("#addFoodForm").submit(function(event) {
         event.preventDefault();
         let data = {
-            foodName: $("#foodName").val(),
-            quantity: $("#quantity").val(),
-            expiryDate: $("#expiryDate").val(),
+            foodName: $("#foodName2").val(),
+            quantity: $("#quantity1").val(),
+            expiryDate: $("#expiryDat1").val(),
             dateAdded: $("#dateAdded").val()
         };
         $.ajax({
@@ -35,7 +35,7 @@ const backendURL = "https://foodwaste-backend.azurewebsites.net/";
 
         event.preventDefault();
         let data = {
-            foodName: $("#foodName").val()
+            foodName: $("#selectFoods").val()
         };
         $.ajax({
             url: backendURL + '/return-foods',
@@ -56,13 +56,13 @@ const backendURL = "https://foodwaste-backend.azurewebsites.net/";
     });
 
 
-    $("#updateFoodForm").submit(function(event) {
+    $("#reduceQuantityForm").submit(function(event) {
         event.preventDefault();
         let data = {
-            foodName: $("#foodName").val(),
-            quantity: $("#quantity").val(),
-            expiryDate: $("#expiryDate").val(),
-            dateAdded: $("#dateAdded").val()
+            foodName: $("#reduceFoodName").val(),
+            quantity: $("#reduceQuantity").val(),
+            expiryDate: $("#reduceExpiry").val(),
+            dateAdded: $("#reducedateAdded").val()
         };
           // Note: method was ori
         $.ajax({
@@ -82,10 +82,10 @@ const backendURL = "https://foodwaste-backend.azurewebsites.net/";
 
     });
 
-        $("#deleteFoodForm").submit(function(event) {
+        $("#removeFoodForm").submit(function(event) {
             event.preventDefault();
             let data = {
-                foodName: $("#foodName").val()
+                foodName: $("#removeFoodName").val()
             };
             // Note: method was ori
             $.ajax({
