@@ -23,6 +23,8 @@ $(document).ready(function() {
                 $("#result").html("An error occurred while adding the food.");
             }
         });
+
+
     });
 
 
@@ -47,6 +49,8 @@ $(document).ready(function() {
                 $("#result").html("An error occurred while adding the food.");
             }
         });
+
+
     });
 
 
@@ -57,7 +61,7 @@ $(document).ready(function() {
             foodName: $("#foodName").val()
         };
         $.ajax({
-            url: '/select-food',
+            url: '/return-foods',
             type: 'GET',
             data: JSON.stringify(data),
             contentType: 'application/json',
@@ -69,6 +73,8 @@ $(document).ready(function() {
                 $("#result").html("An error occurred while selecting the food.");
             }
         });
+
+
     });
 
 
@@ -95,6 +101,7 @@ $(document).ready(function() {
             }
         });
 
+    });
 
         $("#deleteFoodForm").submit(function(event) {
             event.preventDefault();
@@ -116,12 +123,13 @@ $(document).ready(function() {
                 }
             });
 
+        });
+
 
         $("#expireSoonForm").submit(function(event) {
 
 
                 
-        });
 
 
 
@@ -142,4 +150,3 @@ $(document).ready(function() {
 
 });
 
-});
