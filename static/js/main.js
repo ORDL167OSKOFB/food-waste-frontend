@@ -18,6 +18,10 @@ const backendURL = "https://foodwaste-backend.azurewebsites.net/";
             contentType: 'application/json',
             success: function(response) {
                 $("#result").html(response.message);
+
+                setTimeout(function(){
+                    $("#result").html("");
+                }, 5000);
             },
             error: function(error) {
                 console.error(error);
@@ -45,6 +49,10 @@ const backendURL = "https://foodwaste-backend.azurewebsites.net/";
             contentType: 'application/json',
             success: function(response) {
                 $("#result").html(response.message);
+
+                setTimeout(function(){
+                    $("#result").html("");
+                }, 5000);
             },
             error: function(error) {
                 console.error(error);
@@ -73,6 +81,10 @@ const backendURL = "https://foodwaste-backend.azurewebsites.net/";
             contentType: 'application/json',
             success: function(response) {
                 $("#result").html(response.message);
+
+                setTimeout(function(){
+                    $("#result").html("");
+                }, 5000);
             },
             error: function(error) {
                 console.error(error);
@@ -96,6 +108,10 @@ const backendURL = "https://foodwaste-backend.azurewebsites.net/";
                 contentType: 'application/json',
                 success: function(response) {
                     $("#result").html(response.message);
+
+                    setTimeout(function(){
+                        $("#result").html("");
+                    }, 5000);
                 },
                 error: function(error) {
                     console.error(error);
