@@ -36,3 +36,8 @@ button ls-btn {
     border: none;
 }
 
+.input-group {
+    margin-bottom: 10px;
+    justify-content: space-between; 
+    align-items: center; 
+}
