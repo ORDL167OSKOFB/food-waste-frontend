@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 const backendURL = "https://foodwaste-backend.azurewebsites.net/";
-const selectURL = "https://40268037selectfood.azurewebsites.net/"
+const selectURL = "https://40268037selectfood.azurewebsites.net/";
 
 
 //    Try initializing (maybe move this out of the frontend)
