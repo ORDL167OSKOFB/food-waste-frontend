@@ -104,7 +104,31 @@
     
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% comment %} <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% endcomment %}
+
+    <script> 
+        const testingURL = "https://40268037selectfood.azurewebsites.net/return_foods";
+
+        $("#myButton").click(function() {
+            $.ajax({
+                url: testingURL,
+                type: 'GET',
+                success: function(response) {
+                    let output = "";
+                    response.forEach(food => {
+                        output += `<p>${food.food_name}: ${food.quantity}</p>`;
+                    });
+                    $("#result").html(output);
+                },
+                error: function(error) {
+                    console.error(error);
+                    $("#result").html("An error occurred while fetching the data.");
+                }
+            });
+        });
+
+        </script>
 
 </body>
 </html>
