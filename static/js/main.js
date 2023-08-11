@@ -140,6 +140,29 @@ const selectURL = "https://40268037selectfood.azurewebsites.net/";
         });
 
 
+        $("#myButton").click(function() {
+            $.ajax({
+                url: backendURL + '/update-food',
+                async: true,
+                type: 'PUT',
+                data: JSON.stringify(data),
+                contentType: 'application/json',
+                success: function(response) {
+                    $("#result").html(response.message);
+    
+                    setTimeout(function(){
+                        $("#result").html("");
+                    }, 5000);
+                },
+                error: function(error) {
+                    console.error(error);
+                    $("#result").html("An error occurred while updating the food.");
+                }
+            });
+    
+            // return false;
+        });
+        
         $("#expireSoonForm").submit(function(event) {
 
 
