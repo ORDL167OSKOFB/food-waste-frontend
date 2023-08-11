@@ -56,10 +56,10 @@ const selectURL = "https://40268037selectfood.azurewebsites.net/";
             foodName: $("#selectFoods").val()
         };
         $.ajax({
-            url:selectURL,
+            url:selectURL + "/return_foods",
             async: true,
             type: 'GET',
-            data: JSON.stringify(data),
+            data: data,
             contentType: 'application/json',
             success: function(response) {
                 $("#result").html(response.message);
@@ -74,7 +74,7 @@ const selectURL = "https://40268037selectfood.azurewebsites.net/";
             }
         });
 
-
+       
         return false;
 
     });
