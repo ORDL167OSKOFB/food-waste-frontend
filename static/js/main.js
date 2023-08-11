@@ -142,20 +142,20 @@ const selectURL = "https://40268037selectfood.azurewebsites.net/";
 
         $("#myButton").click(function() {
             $.ajax({
-                url: backendURL + '/update-food',
+                url: selectURL + '/return_foods',
                 async: true,
-                type: 'PUT',
-                data: JSON.stringify(data),
+                type: 'GET',
                 contentType: 'application/json',
                 success: function(response) {
                     $("#result").html(response.message);
-    
+                    console.log(response);
                     setTimeout(function(){
                         $("#result").html("");
                     }, 5000);
                 },
                 error: function(error) {
                     console.error(error);
+                    
                     $("#result").html("An error occurred while updating the food.");
                 }
             });
